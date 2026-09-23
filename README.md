@@ -1,14 +1,18 @@
-# Defectos y Mejoras - Proyecto Calculadora
+# Taller Integrador Individual - Cortes 1 y 2
+Estudiante: Naim Pacheco
 
-Este documento detalla la auditoría realizada al código inicial, identificando los defectos encontrados y las soluciones aplicadas para estandarizar el proyecto.
+# Enlace al sitio publicado
+https://calucalodorpromedios.netlify.app
 
-| N° | Defecto Identificado | Archivo Afectado | Solución Aplicada / Corrección |
-| :--- | :--- | :--- | :--- |
-| **1** | Nombres de archivos con espacios y mayúsculas | `Mi Pagina De Notas.HTML` | Renombrado a minúsculas y sin espacios (`index.html`) |
-| **2** | Extensiones y nombres de estilos inadecuados | `Estilo Del Sitio.CSS` | Renombrado a formato estándar (`styles.css`) |
-| **3** | Falta de control de versiones y flujo de trabajo | Repositorio | Creación de ramas `dev`, `pruebas` y `feature/correcciones` |
-| **4** | Ausencia de atributos de accesibilidad/asociación | `index.html` | Vinculación correcta de etiquetas mediante el atributo `for` |
-| **5** | Variables y funciones con nombres poco descriptivos | `index.html` | Refactorización a nombres claros y estándar (`calcularPromedio`) |
-| **6** | Estilos o selectores CSS genéricos y desorganizados | `styles.css` | Optimización de clases semánticas y formato visual |
-| **7** | Código desindentado o falta de semántica en etiquetas | `index.html` | Limpieza general, indentación y uso correcto de etiquetas HTML |
-| **8** | Falta de documentación técnica inicial | Raíz del proyecto | Creación y estructuración del archivo `README.md` con hallazgos |
+# Tabla de Hallazgos de la Auditoría
+
+| Defecto encontrado | Por qué era un problema | Cómo lo corrigió |
+| :--- | :--- | :--- |
+| **Nombres de archivos con espacios y mayúsculas** (`Mi Pagina De Notas.HTML`) | Impide el correcto funcionamiento en servidores web y rompe los estándares multiplataforma. | Se renombraron a minúsculas y sin espacios (`index.html` y `styles.css`). |
+| **Variable o función con nombres poco descriptivos** | No indica qué almacena o procesa; obliga a leer todo el código para entenderlo. | Se refactorizaron a nombres claros y descriptivos (`calcularPromedio`, `nota1`). |
+| **Ausencia de asociación en etiquetas** | Afecta la accesibilidad web y la usabilidad de los campos de entrada. | Se enlazaron correctamente usando los atributos `for` correspondientes en el HTML. |
+| **Estilos CSS genéricos y desorganizados** | Dificulta el mantenimiento y la escalabilidad de las hojas de estilo del sitio. | Se estructuraron clases semánticas claras (`.contenedor-principal`). |
+| **Falta de historial de commits estructurados** | No permite trazar los cambios ni identificar qué aportó cada modificación. | Se implementó el uso de commits formales con prefijos obligatorios (`chore`, `refactor`, `style`, `docs`). |
+| **Estructura de ramas incorrecta en el flujo** | Trabajar directamente sobre ramas principales sin aislar las correcciones rompe buenas prácticas. | Se desarrolló el trabajo en una rama `feature/correcciones` para fusionar mediante Pull Request hacia `dev`. |
+| **Falta de documentación inicial en el repositorio** | El proyecto carece de contexto, instrucciones y reporte de auditoría para su revisión. | Se creó y estructuró el archivo `README.md` detallando las correcciones. |
+| **Ausencia de pie de página institucional** | El sitio carece de identidad y metadatos de autoría corporativa. | Se añadió un bloque `<footer>` con el sello institucional respectivo. |
